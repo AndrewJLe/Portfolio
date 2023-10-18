@@ -1,4 +1,7 @@
 @tailwind base;
+html {
+    scroll-behavior: smooth;
+  }
 @tailwind components;
 @tailwind utilities;
 
@@ -25,3 +28,8 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+@layer base
+  @font-face {
+    font-family:'redHatDisplay';
+    src: url('/Fonts/redHeadDisplay.ttf') format("ttf");
+  }
