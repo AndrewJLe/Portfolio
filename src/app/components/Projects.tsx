@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import { useInView } from 'react-intersection-observer'
+import DiscordClonePreview from '../assets/DiscordClonePreview.gif'
 import BoidsPreview from '../assets/BoidsPreview.gif'
 import ProjectZPreview from '../assets/ProjectZPreview2.gif'
 import GraphSketchpadPreview from '../assets/GraphSketchpadPreview.gif'
@@ -8,11 +9,21 @@ import Button from './Button';
 
 const Projects: React.FC = () => {
     const { ref: titleRef, inView: titleVisibility } = useInView();
+    const { ref: discordCloneRef, inView: discordCloneVisibility } = useInView();
     const { ref: boidRef, inView: boidVisibility } = useInView();
     const { ref: projectZRef, inView: projectZVisibility } = useInView();
     const { ref: graphRef, inView: graphVisibility } = useInView();
 
     const projects = [
+        {
+            title: 'Discord Clone',
+            summary: 'A Discord clone built with Typescript, Next.JS, Prisma, and Clerk. Discord is a popular communication platform designed for creating communities and connecting people through text, voice, and video chat. It allows users to join servers, each dedicated to a specific topic or interest, where they can engage in real-time conversations, share media, and collaborate on various activities. Discord is widely used by gamers, but its versatility has led to adoption in diverse communities, fostering communication and interaction among users globally.',
+            liveLink: 'https://andrewjle-discord-clone.up.railway.app/',
+            sourceCodeLink: 'https://github.com/AndrewJLe/Discord-Clone',
+            preview: DiscordClonePreview,
+            ref: discordCloneRef,
+            view: discordCloneVisibility
+        },
         {
             title: 'Boids',
             summary: 'Boids is an artificial life program that simulates the behaviour of birds, fish, and swarms. The boids follow a set of rules that demonstrate complex emergence behaviour when interacting with other boids within their field of view.',
